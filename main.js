@@ -1,6 +1,6 @@
 class Tab {
     constructor(opt = {}) {
-        const {tab,head,main} = opt;
+        let {tab,head,main} = opt;
         this.tab = opt.tab;
         this.head = opt.head;
         this.main = opt.main;
@@ -10,10 +10,10 @@ class Tab {
         this.btnclick();
     }
     btnclick() {
-        const span = document.querySelectorAll(`${this.head} span`);
-        const spans = [...span];
-        const li = document.querySelectorAll(`${this.main} ul li`);
-        const lis = [...li];
+        let span = document.querySelectorAll(`${this.head} span`);
+        let spans = [...span];
+        let li = document.querySelectorAll(`${this.main} ul li`);
+        let lis = [...li];
         spans.map((val,idx) =>{
             val.onclick = (() =>{
                 lis.map((val1,idxs) =>{
